@@ -4,6 +4,7 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <!-- Main Pages -->
   <url>
     <loc>https://whatsapp-translator.app/</loc>
     <lastmod>2023-11-18T16:30:43+00:00</lastmod>
@@ -33,5 +34,239 @@
     <lastmod>2023-11-18T16:30:43+00:00</lastmod>
     <priority>0.60</priority>
     <changefreq>yearly</changefreq>
+  </url>
+  
+  <!-- Language-specific pages - English -->
+  <url>
+    <loc>https://whatsapp-translator.app/en/</loc>
+    <lastmod>2023-11-18T16:30:43+00:00</lastmod>
+    <priority>0.90</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <!-- Language-specific pages - German -->
+  <url>
+    <loc>https://whatsapp-translator.app/de/</loc>
+    <lastmod>2023-11-18T16:30:43+00:00</lastmod>
+    <priority>0.80</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <!-- Language-specific pages - French -->
+  <url>
+    <loc>https://whatsapp-translator.app/fr/</loc>
+    <lastmod>2023-11-18T16:30:43+00:00</lastmod>
+    <priority>0.80</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <!-- Language-specific pages - Spanish -->
+  <url>
+    <loc>https://whatsapp-translator.app/es/</loc>
+    <lastmod>2023-11-18T16:30:43+00:00</lastmod>
+    <priority>0.80</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <!-- Language-specific pages - Italian -->
+  <url>
+    <loc>https://whatsapp-translator.app/it/</loc>
+    <lastmod>2023-11-18T16:30:43+00:00</lastmod>
+    <priority>0.80</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <!-- Language-specific pages - Dutch -->
+  <url>
+    <loc>https://whatsapp-translator.app/nl/</loc>
+    <lastmod>2023-11-18T16:30:43+00:00</lastmod>
+    <priority>0.80</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <!-- Language-specific pages - Portuguese -->
+  <url>
+    <loc>https://whatsapp-translator.app/pt/</loc>
+    <lastmod>2023-11-18T16:30:43+00:00</lastmod>
+    <priority>0.80</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <!-- Language-specific pages - Russian -->
+  <url>
+    <loc>https://whatsapp-translator.app/ru/</loc>
+    <lastmod>2023-11-18T16:30:43+00:00</lastmod>
+    <priority>0.80</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <!-- Language-specific pages - Chinese -->
+  <url>
+    <loc>https://whatsapp-translator.app/zh/</loc>
+    <lastmod>2023-11-18T16:30:43+00:00</lastmod>
+    <priority>0.80</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <!-- Language-specific pages - Japanese -->
+  <url>
+    <loc>https://whatsapp-translator.app/ja/</loc>
+    <lastmod>2023-11-18T16:30:43+00:00</lastmod>
+    <priority>0.80</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <!-- Add entries for all other supported languages as needed -->
+  
+  <!-- Bulgarian -->
+  <url>
+    <loc>https://whatsapp-translator.app/bg/</loc>
+    <lastmod>2023-11-18T16:30:43+00:00</lastmod>
+    <priority>0.70</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <!-- Czech -->
+  <url>
+    <loc>https://whatsapp-translator.app/cs/</loc>
+    <lastmod>2023-11-18T16:30:43+00:00</lastmod>
+    <priority>0.70</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <!-- Danish -->
+  <url>
+    <loc>https://whatsapp-translator.app/da/</loc>
+    <lastmod>2023-11-18T16:30:43+00:00</lastmod>
+    <priority>0.70</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <!-- Greek -->
+  <url>
+    <loc>https://whatsapp-translator.app/el/</loc>
+    <lastmod>2023-11-18T16:30:43+00:00</lastmod>
+    <priority>0.70</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <!-- Estonian -->
+  <url>
+    <loc>https://whatsapp-translator.app/et/</loc>
+    <lastmod>2023-11-18T16:30:43+00:00</lastmod>
+    <priority>0.70</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <!-- Finnish -->
+  <url>
+    <loc>https://whatsapp-translator.app/fi/</loc>
+    <lastmod>2023-11-18T16:30:43+00:00</lastmod>
+    <priority>0.70</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <!-- Hungarian -->
+  <url>
+    <loc>https://whatsapp-translator.app/hu/</loc>
+    <lastmod>2023-11-18T16:30:43+00:00</lastmod>
+    <priority>0.70</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <!-- Indonesian -->
+  <url>
+    <loc>https://whatsapp-translator.app/id/</loc>
+    <lastmod>2023-11-18T16:30:43+00:00</lastmod>
+    <priority>0.70</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <!-- Korean -->
+  <url>
+    <loc>https://whatsapp-translator.app/ko/</loc>
+    <lastmod>2023-11-18T16:30:43+00:00</lastmod>
+    <priority>0.70</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <!-- Lithuanian -->
+  <url>
+    <loc>https://whatsapp-translator.app/lt/</loc>
+    <lastmod>2023-11-18T16:30:43+00:00</lastmod>
+    <priority>0.70</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <!-- Latvian -->
+  <url>
+    <loc>https://whatsapp-translator.app/lv/</loc>
+    <lastmod>2023-11-18T16:30:43+00:00</lastmod>
+    <priority>0.70</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <!-- Norwegian -->
+  <url>
+    <loc>https://whatsapp-translator.app/nb/</loc>
+    <lastmod>2023-11-18T16:30:43+00:00</lastmod>
+    <priority>0.70</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <!-- Polish -->
+  <url>
+    <loc>https://whatsapp-translator.app/pl/</loc>
+    <lastmod>2023-11-18T16:30:43+00:00</lastmod>
+    <priority>0.70</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <!-- Romanian -->
+  <url>
+    <loc>https://whatsapp-translator.app/ro/</loc>
+    <lastmod>2023-11-18T16:30:43+00:00</lastmod>
+    <priority>0.70</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <!-- Slovak -->
+  <url>
+    <loc>https://whatsapp-translator.app/sk/</loc>
+    <lastmod>2023-11-18T16:30:43+00:00</lastmod>
+    <priority>0.70</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <!-- Slovenian -->
+  <url>
+    <loc>https://whatsapp-translator.app/sl/</loc>
+    <lastmod>2023-11-18T16:30:43+00:00</lastmod>
+    <priority>0.70</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <!-- Swedish -->
+  <url>
+    <loc>https://whatsapp-translator.app/sv/</loc>
+    <lastmod>2023-11-18T16:30:43+00:00</lastmod>
+    <priority>0.70</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <!-- Turkish -->
+  <url>
+    <loc>https://whatsapp-translator.app/tr/</loc>
+    <lastmod>2023-11-18T16:30:43+00:00</lastmod>
+    <priority>0.70</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <!-- Ukrainian -->
+  <url>
+    <loc>https://whatsapp-translator.app/uk/</loc>
+    <lastmod>2023-11-18T16:30:43+00:00</lastmod>
+    <priority>0.70</priority>
+    <changefreq>monthly</changefreq>
   </url>
 </urlset>
