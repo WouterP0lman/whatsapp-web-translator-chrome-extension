@@ -1,9 +1,9 @@
 
 // Service Worker for WhatsApp Translator
-const CACHE_NAME = 'whatsapp-translator-cache-v1';
-const OFFLINE_URL = '/';
+const CACHE_NAME = 'whatsapp-translator-cache-v2';
+const OFFLINE_URL = '/offline.html';
 
-// Lijst van assets die gecached moeten worden
+// Assets to cache for optimal performance
 const assetsToCache = [
   '/',
   '/index.html',
@@ -16,16 +16,18 @@ const assetsToCache = [
   '/icons/icon48.png',
   '/icons/icon128.png',
   '/placeholder.svg',
+  '/manifest.webmanifest',
+  '/src/index.css',
 ];
 
-// Service worker installatie - cache belangrijke assets
+// Optimized installation for faster caching
 self.addEventListener('install', (event) => {
-  console.log('[Service Worker] Install');
+  console.log('[Service Worker] Installing...');
   
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => {
-        console.log('[Service Worker] Caching app shell');
+        console.log('[Service Worker] Caching app shell and content');
         return cache.addAll(assetsToCache);
       })
       .then(() => {
@@ -35,9 +37,9 @@ self.addEventListener('install', (event) => {
   );
 });
 
-// Service worker activatie - verwijder oude caches
+// Optimized activation with clean cache management
 self.addEventListener('activate', (event) => {
-  console.log('[Service Worker] Activate');
+  console.log('[Service Worker] Activating...');
   
   event.waitUntil(
     caches.keys().then((keyList) => {
@@ -48,52 +50,118 @@ self.addEventListener('activate', (event) => {
         }
       }));
     })
+    .then(() => {
+      console.log('[Service Worker] Claiming clients');
+      return self.clients.claim();
+    })
   );
-  
-  return self.clients.claim();
 });
 
-// Fetch strategie - Network first, fall back to cache
+// Advanced fetch strategy - Stale-while-revalidate for better performance
 self.addEventListener('fetch', (event) => {
+  // Skip non-GET requests and certain URLs
   if (event.request.method !== 'GET') return;
   
-  // Skip some Supabase requests and other dynamic content
+  // Skip API requests and other dynamic content
   if (event.request.url.includes('supabase.co') || 
       event.request.url.includes('deepl.com') ||
       event.request.url.includes('api.')) {
     return;
   }
   
+  // Stale-while-revalidate for HTML navigation requests
+  if (event.request.mode === 'navigate' || 
+      (event.request.headers.get('accept') && 
+       event.request.headers.get('accept').includes('text/html'))) {
+    event.respondWith(
+      caches.match(event.request)
+        .then((cachedResponse) => {
+          const fetchPromise = fetch(event.request)
+            .then((networkResponse) => {
+              // Update cache with fresh content
+              if (networkResponse && networkResponse.status === 200) {
+                const cacheCopy = networkResponse.clone();
+                caches.open(CACHE_NAME)
+                  .then((cache) => cache.put(event.request, cacheCopy));
+              }
+              return networkResponse;
+            })
+            .catch(() => {
+              // If both cache and network fail, serve offline page
+              return caches.match(OFFLINE_URL);
+            });
+            
+          // Return cached response immediately if available, otherwise wait for network
+          return cachedResponse || fetchPromise;
+        })
+    );
+    return;
+  }
+  
+  // Cache-first strategy for assets (images, stylesheets, scripts, etc.)
   event.respondWith(
-    fetch(event.request)
-      .then((response) => {
-        // Als het een valide response is, voeg toe aan cache
-        if (response && response.status === 200 && response.type === 'basic') {
-          const responseToCache = response.clone();
-          caches.open(CACHE_NAME).then((cache) => {
-            cache.put(event.request, responseToCache);
-          });
+    caches.match(event.request)
+      .then((cachedResponse) => {
+        if (cachedResponse) {
+          // For cached responses, fetch update in background (no await)
+          fetch(event.request)
+            .then((networkResponse) => {
+              if (networkResponse && networkResponse.status === 200) {
+                caches.open(CACHE_NAME)
+                  .then((cache) => cache.put(event.request, networkResponse));
+              }
+            })
+            .catch(() => console.log('[Service Worker] Update failed, but cached version available'));
+            
+          return cachedResponse;
         }
-        return response;
-      })
-      .catch(() => {
-        // Fallback naar cache als network request faalt
-        return caches.match(event.request)
+        
+        // If not in cache, fetch from network and cache
+        return fetch(event.request)
           .then((response) => {
-            if (response) {
+            if (!response || response.status !== 200) {
               return response;
             }
-            // Als geen cache, probeer de offline pagina
+            
+            const responseToCache = response.clone();
+            caches.open(CACHE_NAME)
+              .then((cache) => {
+                cache.put(event.request, responseToCache);
+              });
+              
+            return response;
+          })
+          .catch(() => {
+            // For failed image requests, return placeholder
+            if (event.request.url.match(/\.(jpg|jpeg|png|gif|svg)$/)) {
+              return caches.match('/placeholder.svg');
+            }
             return caches.match(OFFLINE_URL);
           });
       })
   );
 });
 
-// Background sync voor offline operaties (als nodig)
+// Background sync for better offline experience
 self.addEventListener('sync', (event) => {
   if (event.tag === 'sync-data') {
-    // Implementeer hier logica voor background sync
-    console.log('[Service Worker] Background sync');
+    console.log('[Service Worker] Syncing background data');
+    // Implement background sync logic here
+  }
+});
+
+// Push notification support
+self.addEventListener('push', (event) => {
+  if (event && event.data) {
+    const data = event.data.json();
+    const options = {
+      body: data.body,
+      icon: '/icons/icon128.png',
+      badge: '/icons/icon32.png'
+    };
+    
+    event.waitUntil(
+      self.registration.showNotification(data.title, options)
+    );
   }
 });

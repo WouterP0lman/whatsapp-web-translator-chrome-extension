@@ -3,7 +3,7 @@
   "name": "WhatsApp Translator",
   "short_name": "WA Translator",
   "description": "Translate WhatsApp messages instantly with our 100% free Chrome extension",
-  "start_url": "/",
+  "start_url": "/?utm_source=pwa",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#128C7E",
@@ -37,6 +37,33 @@
     {
       "src": "/icons/icon128.png",
       "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Install Chrome Extension",
+      "short_name": "Install",
+      "description": "Get the Chrome extension setup guide",
+      "url": "/chrome-extension?utm_source=pwa",
+      "icons": [{ "src": "/icons/icon48.png", "sizes": "48x48" }]
+    },
+    {
+      "name": "Contact Support",
+      "short_name": "Contact",
+      "description": "Get in touch with our support team",
+      "url": "/contact?utm_source=pwa",
+      "icons": [{ "src": "/icons/icon48.png", "sizes": "48x48" }]
+    }
+  ],
+  "categories": ["utilities", "productivity", "communication"],
+  "lang": "en",
+  "orientation": "any",
+  "prefer_related_applications": false,
+  "screenshots": [
+    {
+      "src": "/icons/icon128.png",
+      "sizes": "540x720",
       "type": "image/png"
     }
   ]

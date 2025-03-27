@@ -9,4 +9,9 @@ Allow: /contact
 Allow: /privacy-policy
 Allow: /terms-of-service
 
+# Optimized crawl rate hints
+Crawl-delay: 1
+
+# Sitemap location
 Sitemap: https://whatsapp-translator.com/sitemap.xml
+
