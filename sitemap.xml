@@ -6,56 +6,56 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
-    <loc>https://whatsapp-translator.com/</loc>
+    <loc>https://whatsapptranslator.com/</loc>
     <lastmod>2024-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://whatsapp-translator.com/icons/icon128.png</image:loc>
+      <image:loc>https://whatsapptranslator.com/icons/icon128.png</image:loc>
       <image:title>WhatsApp Translator Logo</image:title>
       <image:caption>Free WhatsApp Web Translator Chrome Extension</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://whatsapp-translator.com/chrome-extension</loc>
+    <loc>https://whatsapptranslator.com/chrome-extension</loc>
     <lastmod>2024-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://whatsapp-translator.com/icons/icon128.png</image:loc>
+      <image:loc>https://whatsapptranslator.com/icons/icon128.png</image:loc>
       <image:title>WhatsApp Translator Extension</image:title>
       <image:caption>Step-by-step installation guide for the free WhatsApp Web Translator</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://whatsapp-translator.com/contact</loc>
+    <loc>https://whatsapptranslator.com/contact</loc>
     <lastmod>2024-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://whatsapp-translator.com/icons/icon128.png</image:loc>
+      <image:loc>https://whatsapptranslator.com/icons/icon128.png</image:loc>
       <image:title>Contact WhatsApp Translator</image:title>
       <image:caption>Get support for the WhatsApp Web Translator Chrome Extension</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://whatsapp-translator.com/privacy-policy</loc>
+    <loc>https://whatsapptranslator.com/privacy-policy</loc>
     <lastmod>2024-05-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
     <image:image>
-      <image:loc>https://whatsapp-translator.com/icons/icon128.png</image:loc>
+      <image:loc>https://whatsapptranslator.com/icons/icon128.png</image:loc>
       <image:title>Privacy Policy</image:title>
       <image:caption>Privacy Policy for the WhatsApp Web Translator Extension</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://whatsapp-translator.com/terms-of-service</loc>
+    <loc>https://whatsapptranslator.com/terms-of-service</loc>
     <lastmod>2024-05-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
     <image:image>
-      <image:loc>https://whatsapp-translator.com/icons/icon128.png</image:loc>
+      <image:loc>https://whatsapptranslator.com/icons/icon128.png</image:loc>
       <image:title>Terms of Service</image:title>
       <image:caption>Terms of Service for the WhatsApp Web Translator Extension</image:caption>
     </image:image>

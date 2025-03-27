@@ -13,4 +13,4 @@ Allow: /terms-of-service
 Crawl-delay: 1
 
 # Sitemap location
-Sitemap: https://whatsapp-translator.com/sitemap.xml
+Sitemap: https://whatsapptranslator.com/sitemap.xml
