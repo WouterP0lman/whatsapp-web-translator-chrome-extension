@@ -7,40 +7,40 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
     <loc>https://whatsapp-translator.com/</loc>
-    <lastmod>2024-03-28</lastmod>
+    <lastmod>2024-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://whatsapp-translator.com/icons/icon128.png</image:loc>
+      <image:loc>https://whatsapp-translator.com/lovable-uploads/01169098-52f7-4f6b-8489-f7690e1008ff.png</image:loc>
       <image:title>WhatsApp Translator Logo</image:title>
       <image:caption>Free WhatsApp Web Translator Chrome Extension</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://whatsapp-translator.com/chrome-extension</loc>
-    <lastmod>2024-03-28</lastmod>
+    <lastmod>2024-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://whatsapp-translator.com/icons/icon128.png</image:loc>
+      <image:loc>https://whatsapp-translator.com/lovable-uploads/01169098-52f7-4f6b-8489-f7690e1008ff.png</image:loc>
       <image:title>WhatsApp Translator Extension</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://whatsapp-translator.com/contact</loc>
-    <lastmod>2024-03-28</lastmod>
+    <lastmod>2024-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://whatsapp-translator.com/privacy-policy</loc>
-    <lastmod>2024-03-28</lastmod>
+    <lastmod>2024-05-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://whatsapp-translator.com/terms-of-service</loc>
-    <lastmod>2024-03-28</lastmod>
+    <lastmod>2024-05-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>

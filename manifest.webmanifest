@@ -6,7 +6,7 @@
   "start_url": "/?utm_source=pwa",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#128C7E",
+  "theme_color": "#1E5B76",
   "icons": [
     {
       "src": "/icons/icon16.png",
@@ -29,13 +29,13 @@
       "type": "image/png"
     },
     {
-      "src": "/icons/icon128.png",
+      "src": "/lovable-uploads/01169098-52f7-4f6b-8489-f7690e1008ff.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/icons/icon128.png",
+      "src": "/lovable-uploads/01169098-52f7-4f6b-8489-f7690e1008ff.png",
       "sizes": "512x512",
       "type": "image/png"
     }
@@ -62,7 +62,7 @@
   "prefer_related_applications": false,
   "screenshots": [
     {
-      "src": "/icons/icon128.png",
+      "src": "/lovable-uploads/01169098-52f7-4f6b-8489-f7690e1008ff.png",
       "sizes": "540x720",
       "type": "image/png"
     }
