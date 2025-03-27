@@ -1,6 +1,6 @@
 
 // Service Worker for WhatsApp Translator
-const CACHE_NAME = 'whatsapp-translator-cache-v2';
+const CACHE_NAME = 'whatsapp-translator-cache-v3';
 const OFFLINE_URL = '/offline.html';
 
 // Assets to cache for optimal performance
@@ -18,6 +18,7 @@ const assetsToCache = [
   '/placeholder.svg',
   '/manifest.webmanifest',
   '/src/index.css',
+  '/offline.html'
 ];
 
 // Optimized installation for faster caching
@@ -65,7 +66,9 @@ self.addEventListener('fetch', (event) => {
   // Skip API requests and other dynamic content
   if (event.request.url.includes('supabase.co') || 
       event.request.url.includes('deepl.com') ||
-      event.request.url.includes('api.')) {
+      event.request.url.includes('api.') ||
+      event.request.url.includes('analytics') ||
+      event.request.url.includes('googletagmanager')) {
     return;
   }
   
@@ -86,8 +89,8 @@ self.addEventListener('fetch', (event) => {
               }
               return networkResponse;
             })
-            .catch(() => {
-              // If both cache and network fail, serve offline page
+            .catch((error) => {
+              console.log('[Service Worker] Fetch failed; returning offline page instead.', error);
               return caches.match(OFFLINE_URL);
             });
             
@@ -131,7 +134,8 @@ self.addEventListener('fetch', (event) => {
               
             return response;
           })
-          .catch(() => {
+          .catch((error) => {
+            console.log('[Service Worker] Fetch failed completely.', error);
             // For failed image requests, return placeholder
             if (event.request.url.match(/\.(jpg|jpeg|png|gif|svg)$/)) {
               return caches.match('/placeholder.svg');
@@ -163,5 +167,12 @@ self.addEventListener('push', (event) => {
     event.waitUntil(
       self.registration.showNotification(data.title, options)
     );
+  }
+});
+
+// Handle service worker lifecycle events
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
   }
 });

@@ -1,16 +1,35 @@
 
+# WhatsApp Translator Website Robots.txt
+# Last updated: 2024-05-25
+
 # Allow all web crawlers to access all content
 User-agent: *
 Allow: /
 
-# Important pages to crawl
+# Important pages to index
 Allow: /chrome-extension
 Allow: /contact
 Allow: /privacy-policy
 Allow: /terms-of-service
 
-# Optimized crawl rate hints
+# Crawl-delay directive for better server performance
+# This is a request to crawlers to wait X seconds between consecutive requests
 Crawl-delay: 1
 
 # Sitemap location
 Sitemap: https://whatsapptranslator.com/sitemap.xml
+
+# Additional hints for major crawlers
+User-agent: Googlebot
+Allow: /*.js$
+Allow: /*.css$
+
+User-agent: Googlebot-Image
+Allow: /icons/
+Allow: /lovable-uploads/
+
+User-agent: Bingbot
+Crawl-delay: 2
+
+User-agent: Slurp
+Crawl-delay: 2

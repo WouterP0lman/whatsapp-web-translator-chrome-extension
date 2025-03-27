@@ -7,7 +7,7 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
     <loc>https://whatsapptranslator.com/</loc>
-    <lastmod>2024-05-22</lastmod>
+    <lastmod>2024-05-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -18,7 +18,7 @@
   </url>
   <url>
     <loc>https://whatsapptranslator.com/chrome-extension</loc>
-    <lastmod>2024-05-22</lastmod>
+    <lastmod>2024-05-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -29,7 +29,7 @@
   </url>
   <url>
     <loc>https://whatsapptranslator.com/contact</loc>
-    <lastmod>2024-05-22</lastmod>
+    <lastmod>2024-05-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -40,7 +40,7 @@
   </url>
   <url>
     <loc>https://whatsapptranslator.com/privacy-policy</loc>
-    <lastmod>2024-05-22</lastmod>
+    <lastmod>2024-05-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
     <image:image>
@@ -51,7 +51,7 @@
   </url>
   <url>
     <loc>https://whatsapptranslator.com/terms-of-service</loc>
-    <lastmod>2024-05-22</lastmod>
+    <lastmod>2024-05-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
     <image:image>

@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Currently Offline - WhatsApp Translator</title>
+    <meta name="description" content="You are currently offline. Please check your internet connection to access WhatsApp Translator." />
     <style>
       body {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
@@ -68,6 +69,13 @@
         window.addEventListener('online', () => {
           window.location.reload();
         });
+        
+        // Attempt to reconnect periodically
+        setInterval(() => {
+          if (navigator.onLine) {
+            window.location.reload();
+          }
+        }, 10000);
       }
     </script>
   </body>
