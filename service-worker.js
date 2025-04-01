@@ -1,6 +1,6 @@
 
 // Service Worker for WhatsApp Translator
-const CACHE_NAME = 'whatsapp-translator-cache-v3';
+const CACHE_NAME = 'whatsapp-translator-cache-v4'; // Increment cache version
 const OFFLINE_URL = '/offline.html';
 
 // Assets to cache for optimal performance
@@ -18,7 +18,8 @@ const assetsToCache = [
   '/placeholder.svg',
   '/manifest.webmanifest',
   '/src/index.css',
-  '/offline.html'
+  '/offline.html',
+  '/sitemap.xml' // Explicitly add sitemap.xml to cache
 ];
 
 // Optimized installation for faster caching
@@ -69,6 +70,30 @@ self.addEventListener('fetch', (event) => {
       event.request.url.includes('api.') ||
       event.request.url.includes('analytics') ||
       event.request.url.includes('googletagmanager')) {
+    return;
+  }
+  
+  // Special handling for sitemap.xml
+  if (event.request.url.endsWith('/sitemap.xml')) {
+    event.respondWith(
+      fetch(event.request)
+        .then(response => {
+          // Clone the response to store in cache
+          const responseToCache = response.clone();
+          
+          // Store in cache
+          caches.open(CACHE_NAME)
+            .then(cache => {
+              cache.put(event.request, responseToCache);
+            });
+            
+          return response;
+        })
+        .catch(() => {
+          // If network fetch fails, try to return from cache
+          return caches.match(event.request);
+        })
+    );
     return;
   }
   
