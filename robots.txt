@@ -16,7 +16,7 @@ Allow: /terms-of-service
 # This is a request to crawlers to wait X seconds between consecutive requests
 Crawl-delay: 1
 
-# Sitemap location
+# Sitemap location - Using absolute URL for better recognition
 Sitemap: https://whatsapptranslator.com/sitemap.xml
 
 # Additional hints for major crawlers
